@@ -25,5 +25,4 @@ export class AppComponent {
     obs.subscribe(v => this.formattedArray.push(v));
   }
 
-  // error handling the casse and again
 }
