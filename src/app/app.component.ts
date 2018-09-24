@@ -22,6 +22,7 @@ export class AppComponent {
     const obs = from(this.array).pipe(
       filter(v => v % 2 === 0),
     )
+
     
     obs.subscribe(v => this.formattedArray.push(v));
   }
