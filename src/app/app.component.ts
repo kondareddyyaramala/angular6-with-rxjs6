@@ -23,7 +23,6 @@ export class AppComponent {
       filter(v => v % 2 === 0),
     )
 
-    
     obs.subscribe(v => this.formattedArray.push(v));
   }
 
