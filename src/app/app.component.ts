@@ -11,6 +11,7 @@ import { filter, catchError, tap, concatAll } from 'rxjs/operators';
 export class AppComponent {
   public array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   public formattedArray = [];
+  public capitalizedInput;
 
   ngOnInit() {
     this.fromAndFilterExample();
@@ -22,8 +23,17 @@ export class AppComponent {
     const obs = from(this.array).pipe(
       filter(v => v % 2 === 0),
     )
-
     obs.subscribe(v => this.formattedArray.push(v));
+  }
+
+
+  // Javscript method chaining fromAndFilterExample
+  capitalize(sentence = '') {
+    // capitalize the first word in each word in the five sentence
+    this.capitalizedInput = sentence
+      .split('')
+      .map(word => `${word[0].toUpperCase()}${word.slice(1)}`)
+      .join('');
   }
 
 }

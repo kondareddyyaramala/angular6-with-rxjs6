@@ -5,4 +5,11 @@
       <ul *ngFor="let num of formattedArray"> {{ num }}</ul>
     </li>
   </div>
+
+  <div>
+    <div>Enter the text:  <input #inputText type="text"></div>
+    <div>Click to see the capitalize sentence<button (click)="capitalize(inputText?.value)">Click!</button></div>
+    {{capitalizedInput}}
+
+  </div>
 </body>
